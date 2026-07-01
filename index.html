@@ -67,7 +67,7 @@ header::after{content:"";position:absolute;right:-140px;top:-140px;width:560px;h
 /* ---------- Stats ---------- */
 .stats{background:var(--red);color:#fff;position:relative}
 .stats::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:#fff;opacity:.25}
-.stats-in{max-width:1150px;margin:0 auto;padding:38px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:22px;text-align:center}
+.stats-in{max-width:1150px;margin:0 auto;padding:38px 24px;display:grid;grid-template-columns:repeat(5,1fr);gap:22px;text-align:center}
 .stat .num{font-family:var(--disp);font-weight:900;font-size:clamp(1.8rem,3.4vw,2.7rem);line-height:1}
 .stat .lbl{font-family:var(--disp);font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;opacity:.9;margin-top:8px}
 
@@ -153,6 +153,7 @@ footer{background:var(--navy-deep);color:var(--mist);padding:46px 0}
   .hero-badge{order:-1;margin-bottom:6px;justify-content:flex-start}
   .seal{width:130px}
   .stats-in{grid-template-columns:repeat(2,1fr);gap:26px 12px}
+  .stats-in .stat:last-child{grid-column:1/-1}
   .grid3,.rec-grid{grid-template-columns:1fr}
   .why-grid{grid-template-columns:1fr}
   .careers-in{grid-template-columns:1fr}
@@ -193,7 +194,7 @@ footer{background:var(--navy-deep);color:var(--mist);padding:46px 0}
       <span class="kicker">Your Vote, Our Mission</span>
       <h1>Boots on the ground.<br><em>Results on the board.</em></h1>
       <p class="lead">On Point Consulting &amp; Canvassing runs professional field operations — petition signatures, GPS-verified door programs, and voter contact — 400,000+ signatures gathered across more than a dozen states.</p>
-      <p class="sub">Our crews have held <strong>10,000+ doors a week</strong> in Wisconsin and Arizona and averaged <strong>12,000 a week</strong> in California — with crews of just 10–20. Every knock lands in the app. You only pay for work that verifiably happened.</p>
+      <p class="sub"><strong>11 years in this business</strong> — petitioner, canvasser, manager, coordinator, founder. Our crews have held <strong>10,000+ doors a week</strong> in Wisconsin and Arizona and averaged <strong>12,000 a week</strong> in California — with crews of just 10–20. You only pay for work that verifiably happened.</p>
       <div class="hero-ctas">
         <a class="btn" href="#contact">Start a Campaign</a>
         <a class="btn ghost" href="#careers">Join the Crew</a>
@@ -225,6 +226,7 @@ footer{background:var(--navy-deep);color:var(--mist);padding:46px 0}
 
 <div class="stats">
   <div class="stats-in">
+    <div class="stat rv"><div class="num" data-count="11" data-suffix="">0</div><div class="lbl">Years in the Business</div></div>
     <div class="stat rv"><div class="num" data-count="175000" data-suffix="+">0</div><div class="lbl">Doors Knocked</div></div>
     <div class="stat rv"><div class="num" data-count="400000" data-suffix="+">0</div><div class="lbl">Signatures Gathered</div></div>
     <div class="stat rv"><div class="num" data-count="79" data-suffix="%+">0</div><div class="lbl">Validity Rate</div></div>
@@ -273,7 +275,7 @@ footer{background:var(--navy-deep);color:var(--mist);padding:46px 0}
     <div class="sec-head rv">
       <span class="kicker">Why On Point</span>
       <h2>You only pay for work that verifiably happened</h2>
-      <p>Anyone can promise volume. We built our whole operation around proof — because the work that holds up when it's checked is the only work that counts.</p>
+      <p>Founder-led by an operator who worked every rung over 11 years — petitioner, canvasser, crew manager, coordinator. Anyone can promise volume. We built our whole operation around proof — because the work that holds up when it's checked is the only work that counts.</p>
     </div>
     <div class="why-grid">
       <div class="why rv"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h3>GPS-Verified Production</h3><p>Every door attempt is GPS-verified in the app. Weekly plans you approve, Friday reconciliation to the door, to the dollar. Fraud comes off your bill automatically.</p></div></div>
