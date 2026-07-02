@@ -97,8 +97,10 @@ section{padding:96px 0}
 .mapwrap{margin:0 0 56px;background:#fff;border:1px solid var(--line);border-top:4px solid var(--navy);border-radius:5px;padding:44px 40px 34px;text-align:center}
 .map-title{font-size:clamp(1.3rem,2.6vw,1.8rem);color:var(--navy)}
 .map-sub{color:var(--slate);margin:8px 0 26px;font-size:1rem}
-.usmap{max-width:820px;margin:0 auto}
+.usmap{max-width:880px;margin:0 auto;position:relative}
 .usmap svg{width:100%;height:auto;display:block}
+.map-tip{position:absolute;z-index:5;pointer-events:none;opacity:0;transition:opacity .15s;background:var(--navy);color:#fff;text-align:left;border-radius:5px;padding:12px 15px;max-width:290px;font-size:.88rem;line-height:1.45;box-shadow:0 14px 34px rgba(15,36,56,.35);border-left:4px solid var(--red)}
+.map-tip b{display:block;font-family:var(--disp);text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;margin-bottom:4px;color:#FF6B7D}
 .map-legend{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:22px;font-family:var(--disp);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--slate)}
 .map-legend i{display:inline-block;width:13px;height:13px;border-radius:2px;margin-right:8px;vertical-align:-2px}
 
@@ -406,16 +408,42 @@ document.querySelectorAll('.num[data-count]').forEach(el=>cio.observe(el));
 // form success redirect works on any host (root domain or subpath)
 document.getElementById('nextUrl').value = location.origin + location.pathname.replace(/index\.html$/,'').replace(/\/?$/,'/') + 'thanks.html';
 
-// US map — states we've worked
+// US map — interactive: states we've worked light up with program details
+const OPS={
+  fl:{n:'Florida',d:'Where it started — Hunter’s first campaign as a petitioner. Now HQ: Fort Lauderdale.',c:'#C8102E',h:'#E01A37'},
+  ca:{n:'California',d:'Two cycles running — 10–20K signatures/week with crews of 20–40.'},
+  az:{n:'Arizona',d:'2024 presidential doors — 10,000+/week — plus statewide PAC petition drive.'},
+  wi:{n:'Wisconsin',d:'2024 presidential — 10,000+ doors per week with a crew of 10–20.'},
+  co:{n:'Colorado',d:'2026 — seven statewide initiatives, 40+ state-certified circulators.'},
+  ar:{n:'Arkansas',d:'2024 — 90% of counties covered. Measure made the ballot.'},
+  mi:{n:'Michigan',d:'Statewide petition & field operations.'},
+  oh:{n:'Ohio',d:'Statewide petition & field operations.'},
+  va:{n:'Virginia',d:'Statewide petition & field operations.'},
+  wv:{n:'West Virginia',d:'Statewide petition & field operations.'},
+  ny:{n:'New York',d:'Statewide petition & field operations.'},
+  nh:{n:'New Hampshire',d:'Statewide petition & field operations.'},
+  ky:{n:'Kentucky',d:'Statewide petition & field operations.'},
+  mt:{n:'Montana',d:'Statewide petition & field operations.'}
+};
 fetch('assets/us-map.svg').then(r=>r.text()).then(txt=>{
   const box=document.getElementById('usmap');box.innerHTML=txt;
   const svg=box.querySelector('svg');
   if(!svg.getAttribute('viewBox'))svg.setAttribute('viewBox','0 0 '+svg.getAttribute('width')+' '+svg.getAttribute('height'));
   svg.removeAttribute('width');svg.removeAttribute('height');
-  svg.querySelectorAll('path,g').forEach(p=>{p.style.fill='#DDE4EC';p.style.stroke='#fff'});
-  const hit=['mi','oh','va','wv','ca','az','co','wi','ar','ny','nh','ky','mt'];
-  hit.forEach(s=>svg.querySelectorAll('.'+s).forEach(p=>{p.style.fill='#17324F';const t=document.createElementNS('http://www.w3.org/2000/svg','title');t.textContent=s.toUpperCase()+' — On Point field program';p.appendChild(t)}));
-  svg.querySelectorAll('.fl').forEach(p=>{p.style.fill='#C8102E';const t=document.createElementNS('http://www.w3.org/2000/svg','title');t.textContent='FLORIDA — where it started';p.appendChild(t)});
+  svg.querySelectorAll('path').forEach(p=>{p.style.fill='#E3E9F0';p.style.stroke='#fff';p.style.transition='fill .18s'});
+  const tip=document.createElement('div');tip.className='map-tip';box.appendChild(tip);
+  const move=e=>{const r=box.getBoundingClientRect();let x=e.clientX-r.left+16,y=e.clientY-r.top-14;if(x>r.width-290)x-=310;tip.style.left=x+'px';tip.style.top=y+'px'};
+  Object.keys(OPS).forEach(s=>{
+    const o=OPS[s],base=o.c||'#17324F',hot=o.h||'#C8102E',paths=svg.querySelectorAll('.'+s);
+    paths.forEach(p=>{
+      p.style.fill=base;p.style.cursor='pointer';
+      p.addEventListener('mouseenter',e=>{paths.forEach(q=>q.style.fill=hot);tip.innerHTML='<b>'+o.n+'</b>'+o.d;tip.style.opacity=1;move(e)});
+      p.addEventListener('mousemove',move);
+      p.addEventListener('mouseleave',()=>{paths.forEach(q=>q.style.fill=base);tip.style.opacity=0});
+    });
+    // label larger states with their abbreviation
+    try{const bb=paths[0].getBBox();if(bb.width>42){const t=document.createElementNS('http://www.w3.org/2000/svg','text');t.setAttribute('x',bb.x+bb.width/2);t.setAttribute('y',bb.y+bb.height/2+4);t.setAttribute('text-anchor','middle');t.setAttribute('style','fill:#fff;font-family:Montserrat,sans-serif;font-weight:800;font-size:13px;letter-spacing:1px;pointer-events:none');t.textContent=s.toUpperCase();svg.appendChild(t)}}catch(err){}
+  });
 }).catch(()=>{});
 </script>
 </body>
