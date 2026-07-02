@@ -99,7 +99,7 @@ section{padding:96px 0}
 .map-sub{color:var(--slate);margin:8px 0 26px;font-size:1rem}
 .usmap{max-width:880px;margin:0 auto;position:relative}
 .usmap svg{width:100%;height:auto;display:block}
-.map-tip{position:absolute;z-index:5;pointer-events:none;opacity:0;transition:opacity .15s;background:var(--navy);color:#fff;text-align:left;border-radius:5px;padding:12px 15px;max-width:290px;font-size:.88rem;line-height:1.45;box-shadow:0 14px 34px rgba(15,36,56,.35);border-left:4px solid var(--red)}
+.map-tip{position:absolute;z-index:5;pointer-events:none;opacity:0;transition:opacity .15s;background:var(--navy);color:#fff;text-align:left;border-radius:5px;padding:12px 15px;max-width:330px;font-size:.85rem;line-height:1.45;box-shadow:0 14px 34px rgba(15,36,56,.35);border-left:4px solid var(--red)}
 .map-tip b{display:block;font-family:var(--disp);text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;margin-bottom:4px;color:#FF6B7D}
 .map-legend{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:22px;font-family:var(--disp);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--slate)}
 .map-legend i{display:inline-block;width:13px;height:13px;border-radius:2px;margin-right:8px;vertical-align:-2px}
@@ -132,6 +132,10 @@ section{padding:96px 0}
 .perks li{display:flex;gap:12px;align-items:flex-start;font-size:.97rem;color:var(--ink)}
 .perks li::before{content:"★";color:var(--red);font-size:.85rem;line-height:1.8}
 .perks strong{color:var(--navy)}
+.award{margin-top:28px;display:inline-flex;flex-direction:column;gap:3px;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:5px;padding:14px 22px;background:var(--off)}
+.award-k{font-family:var(--disp);font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--slate)}
+.award-k::before{content:"★ ";color:var(--red)}
+.award-n{font-family:var(--disp);font-weight:800;font-size:1.05rem;color:var(--navy);text-transform:uppercase}
 
 /* contact */
 .contact{background:var(--off)}
@@ -193,7 +197,7 @@ footer{background:var(--navy-deep);color:var(--mist);padding:46px 0}
 <nav>
   <div class="nav-in">
     <a class="logo" href="#top" aria-label="On Point Consulting and Canvassing — home">
-      <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="48" fill="#17324F"/><circle cx="50" cy="50" r="34" fill="#FFFFFF"/><circle cx="50" cy="50" r="20" fill="#C8102E"/><path d="M50 38 l3.5 8 8.8 .8 -6.6 5.8 2 8.6 -7.7 -4.6 -7.7 4.6 2 -8.6 -6.6 -5.8 8.8 -.8 z" fill="#FFFFFF"/></svg>
+      <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><circle cx="48" cy="52" r="44" fill="#17324F"/><circle cx="48" cy="52" r="33" fill="#FFFFFF"/><circle cx="48" cy="52" r="22" fill="#17324F"/><circle cx="48" cy="52" r="12" fill="#FFFFFF"/><circle cx="48" cy="52" r="7" fill="#6E7B8A"/><g fill="#1E5AA8"><path d="M58,42 L84,16 L91,23 L65,49 Z"/><path d="M48,52 L70,44 L56,30 Z"/></g></svg>
       On Point <b>&nbsp;Consulting &amp; Canvassing</b>
     </a>
     <ul class="nav-links" id="navLinks">
@@ -223,22 +227,32 @@ footer{background:var(--navy-deep);color:var(--mist);padding:46px 0}
     <div class="hero-badge">
       <svg class="seal" viewBox="0 0 300 300" aria-hidden="true">
         <defs>
-          <path id="arcTop" d="M 44 150 A 106 106 0 0 1 256 150"/>
-          <path id="arcBot" d="M 52 150 A 98 98 0 0 0 248 150"/>
+          <linearGradient id="opring" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#2B6CB0"/>
+            <stop offset="1" stop-color="#0F2438"/>
+          </linearGradient>
         </defs>
-        <circle cx="150" cy="150" r="146" fill="#FFFFFF"/>
-        <circle cx="150" cy="150" r="146" fill="none" stroke="#17324F" stroke-width="5"/>
-        <circle cx="150" cy="150" r="127" fill="none" stroke="#C8102E" stroke-width="1.6" stroke-dasharray="3 6"/>
-        <text font-family="Montserrat,sans-serif" font-weight="800" font-size="17.5" fill="#17324F" letter-spacing="3.5">
-          <textPath href="#arcTop" startOffset="50%" text-anchor="middle">ON POINT CONSULTING</textPath>
-        </text>
-        <text font-family="Montserrat,sans-serif" font-weight="800" font-size="17.5" fill="#17324F" letter-spacing="3.5">
-          <textPath href="#arcBot" startOffset="50%" text-anchor="middle">&#9733; CANVASSING &#9733;</textPath>
-        </text>
-        <circle cx="150" cy="150" r="76" fill="#17324F"/>
-        <circle cx="150" cy="150" r="54" fill="#FFFFFF"/>
-        <circle cx="150" cy="150" r="33" fill="#C8102E"/>
-        <path d="M150 130 l5.6 12.9 14.1 1.3 -10.6 9.3 3.1 13.8 -12.2 -7.3 -12.2 7.3 3.1 -13.8 -10.6 -9.3 14.1 -1.3 z" fill="#FFFFFF"/>
+        <circle cx="150" cy="150" r="144" fill="#FFFFFF" stroke="url(#opring)" stroke-width="7"/>
+        <g transform="translate(124,106)">
+          <text x="24" y="50" font-family="Montserrat,sans-serif" font-weight="900" font-size="140" fill="#17324F">P</text>
+          <circle r="48" fill="#17324F"/>
+          <circle r="37" fill="#FFFFFF"/>
+          <circle r="26" fill="#17324F"/>
+          <circle r="15" fill="#FFFFFF"/>
+          <circle r="9" fill="#6E7B8A"/>
+          <g fill="#1E5AA8">
+            <path d="M12,-16 L46,-50 L54,-42 L20,-8 Z"/>
+            <path d="M0,2 L26,-8 L10,-24 Z"/>
+            <path d="M42,-60 L56,-74 L63,-67 L49,-53 Z"/>
+            <path d="M52,-50 L66,-64 L73,-57 L59,-43 Z"/>
+          </g>
+        </g>
+        <text x="150" y="207" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="900" font-size="34" letter-spacing="1" fill="#17324F">ON POINT</text>
+        <text x="150" y="231" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="700" font-size="11" letter-spacing="1.5" fill="#6E7B8A">CONSULTING &amp; CANVASSING</text>
+        <line x1="97" y1="243" x2="143" y2="243" stroke="#9AA7B8" stroke-width="1"/>
+        <circle cx="150" cy="243" r="2.5" fill="#C8102E"/>
+        <line x1="157" y1="243" x2="203" y2="243" stroke="#9AA7B8" stroke-width="1"/>
+        <text x="150" y="261" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="700" font-size="9" letter-spacing=".3" fill="#17324F">FOCUSED &#160;|&#160; RELIABLE &#160;|&#160; RESULTS</text>
       </svg>
     </div>
   </div>
@@ -271,12 +285,12 @@ footer{background:var(--navy-deep);color:var(--mist);padding:46px 0}
       </div>
     </div>
     <div class="rec-grid">
-      <div class="rec rv"><span class="yr">2024 · Presidential</span><h3>Wisconsin &amp; Arizona</h3><p>Battleground door programs through the toughest cycle in memory. Sustained double-digit weekly volume with crews of just 10–20 canvassers.</p><div class="big">10,000+<small>doors per week</small></div></div>
-      <div class="rec rv"><span class="yr">Two Cycles Running</span><h3>California</h3><p>Back-to-back cycles running petition crews of 20–40 canvassers on our own turf management and reporting stack — sustained, verified weekly production.</p><div class="big">10–20K<small>signatures per week</small></div></div>
-      <div class="rec rv"><span class="yr">2024 · Statewide</span><h3>Arkansas</h3><p>Statewide ballot-access petition drive — covered 90% of Arkansas counties to hit the geographic distribution requirement, not just raw count.</p><div class="big">On the ballot<small>90% of counties cleared</small></div></div>
-      <div class="rec rv"><span class="yr">2024 · Statewide</span><h3>Arizona Petition Drive</h3><p>Statewide PAC ballot-measure petition program — high-volume signature gathering with per-circulator ledgers and validity tracking.</p><div class="big">Statewide<small>ballot access delivered</small></div></div>
-      <div class="rec rv"><span class="yr">2026 · Active</span><h3>Colorado Ballot Initiatives</h3><p>Running seven statewide measures this cycle with a state-certified circulator crew — street turf plus a tiered event program covering festivals drawing 550,000+.</p><div class="big">7 measures<small>40+ certified circulators</small></div></div>
-      <div class="rec rv"><span class="yr">2026 · Active</span><h3>Florida East Coast</h3><p>Voter contact and door programs in our home market, run out of Fort Lauderdale HQ with GPS-targeted turf maps.</p><div class="big">Home turf<small>HQ · Fort Lauderdale</small></div></div>
+      <div class="rec rv"><span class="yr">2024 · Presidential</span><h3>Wisconsin &amp; Arizona</h3><p>Coordinated battleground door programs — owned the rural turf others wouldn't touch and staffed it with local hires. Sustained double-digit weekly volume with crews of 10–20.</p><div class="big">10,000+<small>doors per week</small></div></div>
+      <div class="rec rv"><span class="yr">Two Cycles Running</span><h3>California</h3><p>A decade in-state: San Diego's short-term-rental referendum, crew lead on the 2020 flavored-tobacco referendum, 6–8 statewides in 2022 — then 2024: seven statewides plus San Francisco, Alameda County &amp; Vallejo petitions, all qualified, with crews of 20–40.</p><div class="big">10–20K<small>signatures per week</small></div></div>
+      <div class="rec rv"><span class="yr">2024 · Field Coordinator</span><h3>Arkansas</h3><p>Issue 2 — the countywide casino-approval amendment. Tactically cleared 90% of counties on a 50-county distribution requirement before deadline; passed with 55.8%. Also delivered RFK Jr.'s ballot access: 13,000 signatures on a 5,000 requirement.</p><div class="big">Passed<small>90% of counties cleared</small></div></div>
+      <div class="rec rv"><span class="yr">2015–2020</span><h3>Michigan</h3><p>Six statewide petition drives — the One Fair Wage minimum-wage increase, earned paid sick time, clean-water protections, and Proposal 1 marijuana legalization (2018) — plus multiple candidate campaigns.</p><div class="big">6 statewides<small>one state, five years</small></div></div>
+      <div class="rec rv"><span class="yr">Four Cycles · Active</span><h3>Colorado</h3><p>18+ statewide petitions across four cycles, running crews since 2024. This cycle: seven concurrent measures, 40+ state-certified circulators, and a tiered event program covering festivals drawing 550,000+.</p><div class="big">18+ petitions<small>7 live measures · 2026</small></div></div>
+      <div class="rec rv"><span class="yr">Est. 2015</span><h3>Florida — Where It Started</h3><p>First clipboard: the Amendment 4 voting-rights petition (passed 2018) and the greyhound-racing ban. Then Amendment 2 medical marijuana (2016) — first coordination role — the Seminole compact defense (2021–22), and Smart &amp; Safe (2024–26).</p><div class="big">Home turf<small>HQ · Fort Lauderdale</small></div></div>
       <div class="rec rv"><span class="yr">Now Booking</span><h3>2026 General</h3><p>Built to mobilize 100 canvassers in 30 days for statewide door programs — weekly production plans, daily reporting, verified-work billing.</p><div class="big">500,000<small>door programs — let's talk</small></div></div>
     </div>
   </div>
@@ -323,6 +337,10 @@ footer{background:var(--navy-deep);color:var(--mist);padding:46px 0}
       <h2>Get paid to change the outcome</h2>
       <p class="cp">Canvassing is the rare job where hustle converts directly to pay — and where the work actually matters. Our top people out-produce entire crews, and we pay like it.</p>
       <a class="btn navy" href="#contact" onclick="document.getElementById('role').value='canvasser'">Apply Now</a>
+      <div class="award">
+        <span class="award-k">Contractor of the Year</span>
+        <span class="award-n">Cameron McCallister</span>
+      </div>
     </div>
     <ul class="perks rv">
       <li><strong>Performance pay, paid weekly</strong>&nbsp;— you produce, you get paid. No waiting, no games.</li>
@@ -358,6 +376,7 @@ footer{background:var(--navy-deep);color:var(--mist);padding:46px 0}
     </div>
     <form class="rv" name="contact" method="POST" action="https://formsubmit.co/hunterleesamodolski@gmail.com">
       <input type="hidden" name="_subject" value="New lead — onpointccc.com">
+      <input type="hidden" name="_cc" value="hunter@onpointccc.com">
       <input type="hidden" name="_next" id="nextUrl" value="">
       <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
       <div class="row2">
@@ -410,20 +429,20 @@ document.getElementById('nextUrl').value = location.origin + location.pathname.r
 
 // US map — interactive: states we've worked light up with program details
 const OPS={
-  fl:{n:'Florida',d:'Where it started — Hunter’s first campaign as a petitioner. Now HQ: Fort Lauderdale.',c:'#C8102E',h:'#E01A37'},
-  ca:{n:'California',d:'Two cycles running — 10–20K signatures/week with crews of 20–40.'},
-  az:{n:'Arizona',d:'2024 presidential doors — 10,000+/week — plus statewide PAC petition drive.'},
-  wi:{n:'Wisconsin',d:'2024 presidential — 10,000+ doors per week with a crew of 10–20.'},
-  co:{n:'Colorado',d:'2026 — seven statewide initiatives, 40+ state-certified circulators.'},
-  ar:{n:'Arkansas',d:'2024 — 90% of counties covered. Measure made the ballot.'},
-  mi:{n:'Michigan',d:'Statewide petition & field operations.'},
-  oh:{n:'Ohio',d:'Statewide petition & field operations.'},
-  va:{n:'Virginia',d:'Statewide petition & field operations.'},
-  wv:{n:'West Virginia',d:'Statewide petition & field operations.'},
+  fl:{n:'Florida — Est. 2015',d:'First clipboard: the Amendment 4 voting-rights-restoration petition (passed 2018) and the greyhound-racing ban. Amendment 2 medical marijuana (2016) — first coordination role, running teams. Seminole gaming-compact defense (2021–22). Smart & Safe marijuana campaigns (2024–26). HQ: Fort Lauderdale.',c:'#C8102E',h:'#E01A37'},
+  ca:{n:'California',d:'San Diego short-term-rental referendum — 62K signatures in 30 days. 2020: crew lead on the statewide flavored-tobacco referendum (became Prop 31). 2022: 6–8 statewide petitions. 2024: coordinated crews & office — seven statewides plus San Francisco, Alameda County & Vallejo petitions, all qualified. 10–20K signatures/week, two cycles running.'},
+  az:{n:'Arizona',d:'2024 presidential — coordinated swing-state door programs at 10,000+ per week. Owned the rural turf, staffed it with local hires.'},
+  wi:{n:'Wisconsin',d:'2024 presidential — coordinated 10,000+ doors/week with a crew of 10–20. Conquered the rural areas others wouldn\'t touch.'},
+  co:{n:'Colorado',d:'Four cycles, 18+ statewide petitions. Running crews since 2024 — seven concurrent measures in the 2026 cycle with 40+ state-certified circulators.'},
+  ar:{n:'Arkansas',d:'2024 field coordinator — Issue 2, the countywide casino-approval amendment: tactically cleared 90% of counties on a 50-county distribution requirement before deadline. Passed 55.8%. Also delivered RFK Jr. ballot access — 13K signatures on a 5K requirement.'},
+  mi:{n:'Michigan',d:'2015–2020: six statewide petition drives — One Fair Wage minimum-wage increase, earned paid sick time (MI Time to Care), clean-water protections, and Proposal 1 marijuana legalization (2018) — plus multiple candidate campaigns.'},
+  oh:{n:'Ohio',d:'First management post — a van and a crew of 4–6. The kidney-dialysis pricing amendment, the Drug Price Relief Act (Issue 2, 2017), and the Stop Puppy Mills campaign.'},
+  va:{n:'Virginia',d:'2025 — candidate ballot-access project: finished in under two weeks with a six-person crew.'},
+  wv:{n:'West Virginia',d:'2018 — statewide ballot-access petition, U.S. Senate campaign.'},
   ny:{n:'New York',d:'Statewide petition & field operations.'},
-  nh:{n:'New Hampshire',d:'Statewide petition & field operations.'},
-  ky:{n:'Kentucky',d:'Statewide petition & field operations.'},
-  mt:{n:'Montana',d:'Statewide petition & field operations.'}
+  nh:{n:'New Hampshire',d:'2022 — candidate ballot-access work.'},
+  ky:{n:'Kentucky',d:'2024 — RFK Jr. independent presidential ballot access.'},
+  mt:{n:'Montana',d:'2026 — statewide candidate petition program, active now.'}
 };
 fetch('assets/us-map.svg').then(r=>r.text()).then(txt=>{
   const box=document.getElementById('usmap');box.innerHTML=txt;
