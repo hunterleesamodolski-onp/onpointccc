@@ -98,7 +98,7 @@ section{padding:96px 0}
 .map-title{font-size:clamp(1.3rem,2.6vw,1.8rem);color:var(--navy)}
 .map-sub{color:var(--slate);margin:8px 0 26px;font-size:1rem}
 .usmap{max-width:880px;margin:0 auto;position:relative}
-.usmap svg{width:100%;height:auto;display:block}
+.usmap svg{width:100%;height:auto;display:block;filter:drop-shadow(0 20px 32px rgba(15,36,56,.16))}
 .map-tip{position:absolute;z-index:5;pointer-events:none;opacity:0;transition:opacity .15s;background:var(--navy);color:#fff;text-align:left;border-radius:5px;padding:12px 15px;max-width:330px;font-size:.85rem;line-height:1.45;box-shadow:0 14px 34px rgba(15,36,56,.35);border-left:4px solid var(--red)}
 .map-tip b{display:block;font-family:var(--disp);text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;margin-bottom:4px;color:#FF6B7D}
 .map-legend{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:22px;font-family:var(--disp);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--slate)}
@@ -132,10 +132,21 @@ section{padding:96px 0}
 .perks li{display:flex;gap:12px;align-items:flex-start;font-size:.97rem;color:var(--ink)}
 .perks li::before{content:"★";color:var(--red);font-size:.85rem;line-height:1.8}
 .perks strong{color:var(--navy)}
-.award{margin-top:28px;display:inline-flex;flex-direction:column;gap:3px;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:5px;padding:14px 22px;background:var(--off)}
+.honors{margin-top:56px;background:#fff;border:1px solid var(--line);border-top:4px solid var(--red);border-radius:5px;padding:34px 36px;box-shadow:0 10px 30px rgba(23,50,79,.07)}
+.honors-note{color:var(--slate);font-size:1.05rem;margin-bottom:24px}
+.honors-note strong{color:var(--navy)}
+.honors-row{display:grid;grid-template-columns:1.15fr .85fr;gap:24px}
+.award{display:flex;flex-direction:column;gap:4px;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:5px;padding:18px 24px;background:var(--off)}
 .award-k{font-family:var(--disp);font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--slate)}
 .award-k::before{content:"★ ";color:var(--red)}
-.award-n{font-family:var(--disp);font-weight:800;font-size:1.05rem;color:var(--navy);text-transform:uppercase}
+.award-n{font-family:var(--disp);font-weight:800;font-size:1.2rem;color:var(--navy);text-transform:uppercase}
+.award-d{font-size:.93rem;color:var(--slate);margin-top:6px;line-height:1.55}
+.runners{display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);border-left:4px solid var(--navy);border-radius:5px;padding:18px 24px;background:var(--off)}
+.runners .award-k::before{color:var(--navy)}
+.runner-names{display:flex;gap:10px;flex-wrap:wrap}
+.runner-names span{font-family:var(--disp);font-weight:800;color:var(--navy);text-transform:uppercase;font-size:.9rem;background:#fff;border:1px solid var(--line);border-radius:3px;padding:6px 13px}
+.runners-d{font-size:.87rem;color:var(--slate)}
+@media(max-width:900px){.honors{padding:26px 22px}.honors-row{grid-template-columns:1fr}}
 
 /* contact */
 .contact{background:var(--off)}
@@ -337,10 +348,6 @@ footer{background:var(--navy-deep);color:var(--mist);padding:46px 0}
       <h2>Get paid to change the outcome</h2>
       <p class="cp">Canvassing is the rare job where hustle converts directly to pay — and where the work actually matters. Our top people out-produce entire crews, and we pay like it.</p>
       <a class="btn navy" href="#contact" onclick="document.getElementById('role').value='canvasser'">Apply Now</a>
-      <div class="award">
-        <span class="award-k">Contractor of the Year</span>
-        <span class="award-n">Cameron McCallister</span>
-      </div>
     </div>
     <ul class="perks rv">
       <li><strong>Performance pay, paid weekly</strong>&nbsp;— you produce, you get paid. No waiting, no games.</li>
@@ -349,6 +356,23 @@ footer{background:var(--navy-deep);color:var(--mist);padding:46px 0}
       <li><strong>Real advancement</strong>&nbsp;— crew leads and managers are promoted from the field.</li>
       <li><strong>Travel opportunities</strong>&nbsp;— deployments across a dozen-plus states and growing.</li>
     </ul>
+  </div>
+  <div class="wrap">
+    <div class="honors rv">
+      <p class="honors-note">One thing we believe: <strong>the people carrying the clipboards are the company.</strong> We work for them — not the other way around.</p>
+      <div class="honors-row">
+        <div class="award">
+          <span class="award-k">Contractor of the Year</span>
+          <span class="award-n">Cameron McCallister</span>
+          <span class="award-d">$250K+ earned this year — with four months still on the clock. We didn't do that; he did. Our job was keeping the turf coming.</span>
+        </div>
+        <div class="runners">
+          <span class="award-k">Honored alongside him</span>
+          <div class="runner-names"><span>Lisa M</span><span>James E</span><span>Jaden C</span></div>
+          <span class="runners-d">Thank you for carrying us. It's a privilege to hand you clipboards.</span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -449,19 +473,20 @@ fetch('assets/us-map.svg').then(r=>r.text()).then(txt=>{
   const svg=box.querySelector('svg');
   if(!svg.getAttribute('viewBox'))svg.setAttribute('viewBox','0 0 '+svg.getAttribute('width')+' '+svg.getAttribute('height'));
   svg.removeAttribute('width');svg.removeAttribute('height');
-  svg.querySelectorAll('path').forEach(p=>{p.style.fill='#E3E9F0';p.style.stroke='#fff';p.style.transition='fill .18s'});
+  svg.querySelectorAll('path').forEach(p=>{p.style.fill='#EBEFF4';p.style.stroke='#fff';p.style.strokeWidth='1.2';p.style.transition='fill .18s,filter .18s'});
   const tip=document.createElement('div');tip.className='map-tip';box.appendChild(tip);
-  const move=e=>{const r=box.getBoundingClientRect();let x=e.clientX-r.left+16,y=e.clientY-r.top-14;if(x>r.width-290)x-=310;tip.style.left=x+'px';tip.style.top=y+'px'};
+  const move=e=>{const r=box.getBoundingClientRect();let x=e.clientX-r.left+16,y=e.clientY-r.top-14;if(x>r.width-330)x-=350;tip.style.left=x+'px';tip.style.top=y+'px'};
+  const lift='drop-shadow(0 3px 4px rgba(15,36,56,.38))',liftHot='drop-shadow(0 7px 11px rgba(15,36,56,.5))';
   Object.keys(OPS).forEach(s=>{
     const o=OPS[s],base=o.c||'#17324F',hot=o.h||'#C8102E',paths=svg.querySelectorAll('.'+s);
     paths.forEach(p=>{
-      p.style.fill=base;p.style.cursor='pointer';
-      p.addEventListener('mouseenter',e=>{paths.forEach(q=>q.style.fill=hot);tip.innerHTML='<b>'+o.n+'</b>'+o.d;tip.style.opacity=1;move(e)});
+      p.style.fill=base;p.style.cursor='pointer';p.style.stroke='#fff';p.style.strokeWidth='1.5';p.style.filter=lift;
+      p.addEventListener('mouseenter',e=>{paths.forEach(q=>{q.style.fill=hot;q.style.filter=liftHot});tip.innerHTML='<b>'+o.n+'</b>'+o.d;tip.style.opacity=1;move(e)});
       p.addEventListener('mousemove',move);
-      p.addEventListener('mouseleave',()=>{paths.forEach(q=>q.style.fill=base);tip.style.opacity=0});
+      p.addEventListener('mouseleave',()=>{paths.forEach(q=>{q.style.fill=base;q.style.filter=lift});tip.style.opacity=0});
     });
-    // label larger states with their abbreviation
-    try{const bb=paths[0].getBBox();if(bb.width>42){const t=document.createElementNS('http://www.w3.org/2000/svg','text');t.setAttribute('x',bb.x+bb.width/2);t.setAttribute('y',bb.y+bb.height/2+4);t.setAttribute('text-anchor','middle');t.setAttribute('style','fill:#fff;font-family:Montserrat,sans-serif;font-weight:800;font-size:13px;letter-spacing:1px;pointer-events:none');t.textContent=s.toUpperCase();svg.appendChild(t)}}catch(err){}
+    // label only the states with room for it — keeps the East Coast clean
+    try{const bb=paths[0].getBBox();if(['ca','mt','az','co','ar','wi','mi','ny','fl'].includes(s)){const t=document.createElementNS('http://www.w3.org/2000/svg','text');t.setAttribute('x',bb.x+bb.width/2);t.setAttribute('y',bb.y+bb.height/2+4);t.setAttribute('text-anchor','middle');t.setAttribute('style','fill:#fff;font-family:Montserrat,sans-serif;font-weight:800;font-size:14px;letter-spacing:1px;pointer-events:none;paint-order:stroke;stroke:rgba(15,36,56,.55);stroke-width:2.5px');t.textContent=s.toUpperCase();svg.appendChild(t)}}catch(err){}
   });
 }).catch(()=>{});
 </script>
