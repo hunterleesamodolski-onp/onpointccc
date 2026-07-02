@@ -84,11 +84,23 @@ section{padding:96px 0}
 .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .rec{background:#fff;border:1px solid var(--line);border-top:4px solid var(--navy);border-radius:5px;padding:26px 24px;transition:.25s;display:flex;flex-direction:column}
 .rec:hover{transform:translateY(-5px);box-shadow:0 16px 34px rgba(23,50,79,.14);border-top-color:var(--red)}
+.rec-grid .rec:last-child:nth-child(3n+1){grid-column:1/-1;flex-direction:row;align-items:center;gap:26px;border-top-color:var(--red)}
+.rec-grid .rec:last-child:nth-child(3n+1) .big{margin-top:0;flex:none}
+@media(max-width:900px){.rec-grid .rec:last-child:nth-child(3n+1){flex-direction:column;align-items:flex-start;gap:0}.rec-grid .rec:last-child:nth-child(3n+1) .big{margin-top:16px}}
 .rec .yr{display:inline-flex;align-self:flex-start;background:var(--navy);color:#fff;font-family:var(--disp);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;padding:5px 12px;border-radius:2px;margin-bottom:14px}
 .rec h3{font-size:1.06rem;color:var(--navy);margin-bottom:10px}
 .rec p{font-size:.93rem;color:var(--slate);flex:1}
 .rec .big{font-family:var(--disp);font-weight:900;color:var(--red);font-size:1.5rem;margin-top:16px;line-height:1.1}
 .rec .big small{display:block;font-family:var(--disp);font-weight:700;font-size:.66rem;letter-spacing:.14em;color:var(--slate);text-transform:uppercase;margin-top:5px}
+
+/* map */
+.mapwrap{margin-top:64px;background:#fff;border:1px solid var(--line);border-top:4px solid var(--navy);border-radius:5px;padding:44px 40px 34px;text-align:center}
+.map-title{font-size:clamp(1.3rem,2.6vw,1.8rem);color:var(--navy)}
+.map-sub{color:var(--slate);margin:8px 0 26px;font-size:1rem}
+.usmap{max-width:820px;margin:0 auto}
+.usmap svg{width:100%;height:auto;display:block}
+.map-legend{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:22px;font-family:var(--disp);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--slate)}
+.map-legend i{display:inline-block;width:13px;height:13px;border-radius:2px;margin-right:8px;vertical-align:-2px}
 
 /* services */
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
@@ -200,7 +212,7 @@ footer{background:var(--navy-deep);color:var(--mist);padding:46px 0}
       <span class="kicker">Your Vote, Our Mission</span>
       <h1>Boots on the ground.<br><em>Results on the board.</em></h1>
       <p class="lead">On Point Consulting &amp; Canvassing runs professional field operations — petition signatures, GPS-verified door programs, and voter contact — 400,000+ signatures gathered across more than a dozen states.</p>
-      <p class="sub"><strong>11 years in this business</strong> — petitioner, canvasser, manager, coordinator, founder. Our crews have held <strong>10,000+ doors a week</strong> in Wisconsin and Arizona and averaged <strong>12,000 a week</strong> in California — with crews of just 10–20. You only pay for work that verifiably happened.</p>
+      <p class="sub"><strong>11 years in this business</strong> — petitioner, canvasser, manager, coordinator, founder. Crews holding <strong>10,000+ doors a week</strong> in the battlegrounds and gathering <strong>10–20K signatures a week</strong> in California, two cycles running. You only pay for work that verifiably happened.</p>
       <div class="hero-ctas">
         <a class="btn" href="#contact">Start a Campaign</a>
         <a class="btn ghost" href="#careers">Join the Crew</a>
@@ -236,7 +248,7 @@ footer{background:var(--navy-deep);color:var(--mist);padding:46px 0}
     <div class="stat rv"><div class="num" data-count="175000" data-suffix="+">0</div><div class="lbl">Doors Knocked</div></div>
     <div class="stat rv"><div class="num" data-count="400000" data-suffix="+">0</div><div class="lbl">Signatures Gathered</div></div>
     <div class="stat rv"><div class="num" data-count="79" data-suffix="%+">0</div><div class="lbl">Validity Rate</div></div>
-    <div class="stat rv"><div class="num" data-count="12" data-suffix="+">0</div><div class="lbl">States &amp; Counting</div></div>
+    <div class="stat rv"><div class="num" data-count="14" data-suffix="">0</div><div class="lbl">States &amp; Counting</div></div>
   </div>
 </div>
 
@@ -249,11 +261,21 @@ footer{background:var(--navy-deep);color:var(--mist);padding:46px 0}
     </div>
     <div class="rec-grid">
       <div class="rec rv"><span class="yr">2024 · Presidential</span><h3>Wisconsin &amp; Arizona</h3><p>Battleground door programs through the toughest cycle in memory. Sustained double-digit weekly volume with crews of just 10–20 canvassers.</p><div class="big">10,000+<small>doors per week</small></div></div>
-      <div class="rec rv"><span class="yr">2024 · Presidential</span><h3>California</h3><p>Independent voter-contact program run on our own turf management and reporting stack — roughly 20 canvassers, sustained all cycle.</p><div class="big">12,000<small>doors per week, average</small></div></div>
+      <div class="rec rv"><span class="yr">Two Cycles Running</span><h3>California</h3><p>Back-to-back cycles running petition crews of 20–40 canvassers on our own turf management and reporting stack — sustained, verified weekly production.</p><div class="big">10–20K<small>signatures per week</small></div></div>
+      <div class="rec rv"><span class="yr">2024 · Statewide</span><h3>Arkansas</h3><p>Statewide ballot-access petition drive — covered 90% of Arkansas counties to hit the geographic distribution requirement, not just raw count.</p><div class="big">On the ballot<small>90% of counties cleared</small></div></div>
       <div class="rec rv"><span class="yr">2024 · Statewide</span><h3>Arizona Petition Drive</h3><p>Statewide PAC ballot-measure petition program — high-volume signature gathering with per-circulator ledgers and validity tracking.</p><div class="big">Statewide<small>ballot access delivered</small></div></div>
       <div class="rec rv"><span class="yr">2026 · Active</span><h3>Colorado Ballot Initiatives</h3><p>Running seven statewide measures this cycle with a state-certified circulator crew — street turf plus a tiered event program covering festivals drawing 550,000+.</p><div class="big">7 measures<small>40+ certified circulators</small></div></div>
       <div class="rec rv"><span class="yr">2026 · Active</span><h3>Florida East Coast</h3><p>Voter contact and door programs in our home market, run out of Fort Lauderdale HQ with GPS-targeted turf maps.</p><div class="big">Home turf<small>HQ · Fort Lauderdale</small></div></div>
       <div class="rec rv"><span class="yr">Now Booking</span><h3>2026 General</h3><p>Built to mobilize 100 canvassers in 30 days for statewide door programs — weekly production plans, daily reporting, verified-work billing.</p><div class="big">500,000<small>door programs — let's talk</small></div></div>
+    </div>
+    <div class="mapwrap rv">
+      <h3 class="map-title">The map so far — 14 states</h3>
+      <p class="map-sub">From a first campaign as a petitioner in Florida to statewide programs coast to coast.</p>
+      <div class="usmap" id="usmap" aria-label="Map of U.S. states where On Point has run field operations"></div>
+      <div class="map-legend">
+        <span><i style="background:var(--red)"></i>Florida — where it started</span>
+        <span><i style="background:var(--navy)"></i>States we've worked</span>
+      </div>
     </div>
   </div>
 </section>
@@ -383,6 +405,18 @@ document.querySelectorAll('.num[data-count]').forEach(el=>cio.observe(el));
 
 // form success redirect works on any host (root domain or subpath)
 document.getElementById('nextUrl').value = location.origin + location.pathname.replace(/index\.html$/,'').replace(/\/?$/,'/') + 'thanks.html';
+
+// US map — states we've worked
+fetch('assets/us-map.svg').then(r=>r.text()).then(txt=>{
+  const box=document.getElementById('usmap');box.innerHTML=txt;
+  const svg=box.querySelector('svg');
+  if(!svg.getAttribute('viewBox'))svg.setAttribute('viewBox','0 0 '+svg.getAttribute('width')+' '+svg.getAttribute('height'));
+  svg.removeAttribute('width');svg.removeAttribute('height');
+  svg.querySelectorAll('path,g').forEach(p=>{p.style.fill='#DDE4EC';p.style.stroke='#fff'});
+  const hit=['mi','oh','va','wv','ca','az','co','wi','ar','ny','nh','ky','mt'];
+  hit.forEach(s=>svg.querySelectorAll('.'+s).forEach(p=>{p.style.fill='#17324F';const t=document.createElementNS('http://www.w3.org/2000/svg','title');t.textContent=s.toUpperCase()+' — On Point field program';p.appendChild(t)}));
+  svg.querySelectorAll('.fl').forEach(p=>{p.style.fill='#C8102E';const t=document.createElementNS('http://www.w3.org/2000/svg','title');t.textContent='FLORIDA — where it started';p.appendChild(t)});
+}).catch(()=>{});
 </script>
 </body>
 </html>
