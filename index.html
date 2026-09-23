@@ -3,237 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>On Point Consulting &amp; Canvassing — Your Vote, Our Mission</title>
-<meta name="description" content="On Point Consulting & Canvassing — professional petition signature gathering, GPS-verified door canvassing, and field operations. 350,000+ doors. 5 states. You only pay for work that verifiably happened.">
-<meta property="og:title" content="On Point Consulting & Canvassing">
-<meta property="og:description" content="Your Vote, Our Mission. GPS-verified canvassing, petition programs, and field operations that show their work.">
+<title>On Point Consulting — Focused. Reliable. Results.</title>
+<meta name="description" content="On Point Consulting — turnkey sales & canvass crews, recruitment & training, lead generation and call floors, AI-built business systems, and media. 225,000+ doors, 400,000+ signatures, 15 states. You only pay for work that verifiably happened.">
+<meta property="og:title" content="On Point Consulting">
+<meta property="og:description" content="Focused. Reliable. Results. Turnkey sales crews, field operations, recruiting, lead gen, AI systems, and media — built on 11 years of ground game.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://onpointccc.com/">
 <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="%2317324F"/><circle cx="50" cy="50" r="34" fill="%23FFFFFF"/><circle cx="50" cy="50" r="20" fill="%23C8102E"/><path d="M50 38 l3.5 8 8.8 0.8 -6.6 5.8 2 8.6 -7.7 -4.6 -7.7 4.6 2 -8.6 -6.6 -5.8 8.8 -0.8 z" fill="%23FFFFFF"/></svg>'>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-:root{
-  --navy:#17324F; --navy-deep:#0F2438; --navy-line:#24466B;
-  --blue:#205493;
-  --red:#C8102E; --red-bright:#E01A37;
-  --white:#FFFFFF; --off:#F4F6F9; --line:#DDE4EC;
-  --ink:#1A2733; --slate:#51637A; --mist:#A9BBD0;
-  --disp:'Montserrat',sans-serif; --body:'Source Sans 3',sans-serif;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:var(--body);background:var(--white);color:var(--ink);line-height:1.6;overflow-x:hidden}
-::selection{background:var(--red);color:#fff}
-h1,h2,h3{font-family:var(--disp);text-transform:uppercase;line-height:1.08;letter-spacing:.01em}
-a{color:inherit}
-.wrap{max-width:1150px;margin:0 auto;padding:0 24px}
-
-/* ---------- Nav ---------- */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);box-shadow:0 4px 18px rgba(15,36,56,.07)}
-.nav-in{max-width:1150px;margin:0 auto;padding:0 24px;height:70px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:11px;text-decoration:none;font-family:var(--disp);font-weight:800;font-size:1.02rem;text-transform:uppercase;letter-spacing:.05em;color:var(--navy)}
-.logo svg{flex:none}
-.logo b{color:var(--red)}
-.nav-links{display:flex;gap:26px;align-items:center;list-style:none}
-.nav-links a{text-decoration:none;font-family:var(--disp);font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--navy);transition:.2s}
-.nav-links a:hover{color:var(--red)}
-.btn{display:inline-block;background:linear-gradient(180deg,#E01A37,#BE0E2B);color:#fff;text-decoration:none;font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.09em;padding:14px 30px;border:none;border-radius:3px;cursor:pointer;font-size:.85rem;transition:.2s;box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 6px 18px rgba(200,16,46,.35)}
-.btn:hover{background:linear-gradient(180deg,#F02B47,#D31A38);transform:translateY(-2px);box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 12px 28px rgba(200,16,46,.45)}
-.btn.ghost{background:transparent;border:2px solid rgba(255,255,255,.5);box-shadow:none}
-.btn.ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
-.btn.navy{background:linear-gradient(180deg,#1D3E62,#132A44);box-shadow:0 1px 0 rgba(255,255,255,.18) inset,0 6px 18px rgba(23,50,79,.35)}
-.btn.navy:hover{background:linear-gradient(180deg,#265081,#1B3A5C)}
-.nav-cta{padding:10px 20px;font-size:.74rem}
-.burger{display:none;background:none;border:none;color:var(--navy);font-size:1.7rem;cursor:pointer}
-
-/* ---------- Hero ---------- */
-header{position:relative;min-height:92svh;display:flex;align-items:center;padding:150px 0 110px;background:linear-gradient(180deg,transparent 62%,rgba(6,14,24,.4) 100%),linear-gradient(160deg,var(--navy-deep) 0%,var(--navy) 55%,#1C3E63 100%);color:#fff;overflow:hidden}
-header::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(ellipse at 65% 35%,black 25%,transparent 72%);pointer-events:none}
-header::after{content:"";position:absolute;right:-140px;top:-140px;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(200,16,46,.28),transparent 65%);pointer-events:none}
-.hero{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-.kicker{display:inline-flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:800;font-size:.74rem;text-transform:uppercase;letter-spacing:.24em;color:#FF5A6E;margin-bottom:20px}
-.kicker::before{content:"";width:36px;height:3px;background:var(--red-bright)}
-.hero h1{font-size:clamp(2.4rem,5.6vw,4.1rem);font-weight:900;margin-bottom:22px}
-.hero h1 em{font-style:normal;color:#FF4D63}
-.hero p.lead{font-size:1.16rem;color:#C9D6E6;max-width:36rem;margin-bottom:20px}
-.hero p.sub{font-size:.95rem;color:var(--mist);max-width:36rem;margin-bottom:32px}
-.hero p.sub strong{color:#fff}
-.hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
-.hero-badge{display:flex;justify-content:center}
-.seal{width:min(320px,68vw);filter:drop-shadow(0 22px 55px rgba(0,0,0,.45))}
-
-/* ---------- Stats ---------- */
-.stats{background:linear-gradient(180deg,#D6203E 0%,#B60E28 100%);color:#fff;position:relative;z-index:2;box-shadow:0 14px 34px rgba(182,14,40,.3)}
-.stats::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:#fff;opacity:.25}
-.stat .num{text-shadow:0 2px 10px rgba(0,0,0,.28)}
-.stats-in{max-width:1150px;margin:0 auto;padding:38px 24px;display:grid;grid-template-columns:repeat(5,1fr);gap:22px;text-align:center}
-.stat .num{font-family:var(--disp);font-weight:900;font-size:clamp(1.8rem,3.4vw,2.7rem);line-height:1}
-.stat .lbl{font-family:var(--disp);font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.16em;opacity:.9;margin-top:8px}
-
-/* ---------- Sections ---------- */
-section{padding:96px 0}
-.sec-head{max-width:760px;margin-bottom:54px}
-.sec-head h2{font-size:clamp(1.8rem,3.8vw,2.8rem);font-weight:800;color:var(--navy);margin:14px 0 16px}
-.sec-head p{color:var(--slate);font-size:1.08rem}
-.k-navy{color:var(--red)}
-.k-navy::before{background:var(--red)}
-
-/* record / campaigns */
-.record{background:var(--off)}
-.rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.rec{background:linear-gradient(180deg,#FFFFFF,#FAFBFD);border:1px solid var(--line);border-top:4px solid var(--navy);border-radius:5px;padding:26px 24px;transition:.25s;display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(16,24,38,.05),0 10px 26px rgba(16,24,38,.07)}
-.rec:hover{transform:translateY(-5px);box-shadow:0 2px 4px rgba(16,24,38,.06),0 26px 50px rgba(23,50,79,.17);border-top-color:var(--red)}
-.rec-grid .rec:last-child:nth-child(3n+1){grid-column:1/-1;flex-direction:row;align-items:center;gap:26px;border-top-color:var(--red)}
-.rec-grid .rec:last-child:nth-child(3n+1) .big{margin-top:0;flex:none}
-@media(max-width:900px){.rec-grid .rec:last-child:nth-child(3n+1){flex-direction:column;align-items:flex-start;gap:0}.rec-grid .rec:last-child:nth-child(3n+1) .big{margin-top:16px}}
-.rec .yr{display:inline-flex;align-self:flex-start;background:var(--navy);color:#fff;font-family:var(--disp);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;padding:5px 12px;border-radius:2px;margin-bottom:14px}
-.rec h3{font-size:1.06rem;color:var(--navy);margin-bottom:10px}
-.rec p{font-size:.93rem;color:var(--slate);flex:1}
-.rec .big{font-family:var(--disp);font-weight:900;color:var(--red);font-size:1.5rem;margin-top:16px;line-height:1.1}
-.rec .big small{display:block;font-family:var(--disp);font-weight:700;font-size:.66rem;letter-spacing:.14em;color:var(--slate);text-transform:uppercase;margin-top:5px}
-
-/* map */
-.mapwrap{margin:0 0 56px;background:linear-gradient(180deg,#FFFFFF,#FAFBFD);border:1px solid var(--line);border-top:4px solid var(--navy);border-radius:5px;padding:44px 40px 34px;text-align:center;box-shadow:0 2px 6px rgba(16,24,38,.05),0 18px 42px rgba(16,24,38,.09)}
-.map-title{font-size:clamp(1.3rem,2.6vw,1.8rem);color:var(--navy)}
-.map-sub{color:var(--slate);margin:8px 0 26px;font-size:1rem}
-.usmap{max-width:880px;margin:0 auto;position:relative}
-.usmap svg{width:100%;height:auto;display:block;filter:drop-shadow(0 20px 32px rgba(15,36,56,.16))}
-.map-tip{position:absolute;z-index:5;pointer-events:none;opacity:0;transition:opacity .15s;background:var(--navy);color:#fff;text-align:left;border-radius:5px;padding:12px 15px;max-width:330px;font-size:.85rem;line-height:1.45;box-shadow:0 14px 34px rgba(15,36,56,.35);border-left:4px solid var(--red)}
-.map-tip b{display:block;font-family:var(--disp);text-transform:uppercase;letter-spacing:.08em;font-size:.82rem;margin-bottom:4px;color:#FF6B7D}
-.map-legend{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:22px;font-family:var(--disp);font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--slate)}
-.map-legend i{display:inline-block;width:13px;height:13px;border-radius:2px;margin-right:8px;vertical-align:-2px}
-
-/* services */
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.card{background:linear-gradient(180deg,#FFFFFF,#FAFBFD);border:1px solid var(--line);border-radius:5px;padding:30px 26px;position:relative;overflow:hidden;transition:.25s;box-shadow:0 1px 2px rgba(16,24,38,.05),0 10px 26px rgba(16,24,38,.06)}
-.card:hover{transform:translateY(-5px);box-shadow:0 2px 4px rgba(16,24,38,.06),0 24px 48px rgba(23,50,79,.16)}
-.card::after{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--red);transform:scaleY(0);transform-origin:top;transition:.25s}
-.card:hover::after{transform:scaleY(1)}
-.card .n{font-family:var(--disp);font-weight:900;color:var(--navy);opacity:.14;font-size:2.5rem;line-height:1}
-.card h3{font-size:1.08rem;margin:12px 0 10px;color:var(--navy)}
-.card p{font-size:.93rem;color:var(--slate)}
-
-/* why */
-.why-sec{background:radial-gradient(900px 520px at 88% -5%,rgba(200,16,46,.2),transparent 62%),radial-gradient(700px 400px at -5% 105%,rgba(32,84,147,.35),transparent 60%),var(--navy);color:#fff}
-.why-sec .sec-head h2{color:#fff}
-.why-sec .sec-head p{color:var(--mist)}
-.why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
-.why{display:flex;gap:18px;background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.03));border:1px solid var(--navy-line);border-radius:5px;padding:26px;box-shadow:0 1px 0 rgba(255,255,255,.09) inset,0 14px 30px rgba(0,0,0,.28);transition:.25s}
-.why:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.22);box-shadow:0 1px 0 rgba(255,255,255,.12) inset,0 22px 44px rgba(0,0,0,.36)}
-.why .ic{flex:none;width:46px;height:46px;border-radius:4px;background:rgba(200,16,46,.22);display:grid;place-items:center;color:#FF6B7D}
-.why h3{font-size:1.03rem;margin-bottom:8px}
-.why p{font-size:.92rem;color:var(--mist)}
-
-/* mission */
-.mission{background:linear-gradient(180deg,#FFFFFF 0%,#F2F5F9 100%);border-bottom:1px solid var(--line);position:relative;overflow:hidden}
-.mission::before{content:"";position:absolute;right:-190px;top:50%;transform:translateY(-50%);width:620px;height:620px;border-radius:50%;background:repeating-radial-gradient(circle at center,rgba(23,50,79,.055) 0 2px,transparent 2px 58px);pointer-events:none}
-.mission::after{content:"";position:absolute;left:-240px;bottom:-240px;width:480px;height:480px;border-radius:50%;background:repeating-radial-gradient(circle at center,rgba(200,16,46,.045) 0 2px,transparent 2px 46px);pointer-events:none}
-.mission-in{position:relative;z-index:1}
-.mission-in{max-width:820px;text-align:center}
-.mission-in .kicker{justify-content:center}
-.mission-in h2{font-size:clamp(2rem,4.4vw,3.1rem);font-weight:900;color:var(--navy);margin:14px 0 10px;text-transform:uppercase}
-.mission-sub{font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:.85rem;color:var(--red);margin-bottom:30px}
-.mission-in p{color:var(--slate);font-size:1.07rem;line-height:1.75;margin-bottom:20px;text-align:left}
-.mission-in p strong{color:var(--navy)}
-.motto{margin-top:32px;font-family:var(--disp);font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:var(--navy);font-size:.92rem}
-.motto b{color:var(--red);font-weight:800;padding:0 8px}
-
-/* careers */
-.careers-in{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center}
-.careers h2{font-size:clamp(1.8rem,3.8vw,2.6rem);font-weight:800;color:var(--navy);margin:14px 0 16px}
-.careers p.cp{color:var(--slate);margin-bottom:26px;font-size:1.05rem}
-.perks{list-style:none;display:grid;gap:14px}
-.perks li{display:flex;gap:12px;align-items:flex-start;font-size:.97rem;color:var(--ink)}
-.perks li::before{content:"★";color:var(--red);font-size:.85rem;line-height:1.8}
-.perks strong{color:var(--navy)}
-.honors{margin-top:56px;background:#fff;border:1px solid var(--line);border-top:4px solid var(--red);border-radius:5px;padding:34px 36px;box-shadow:0 10px 30px rgba(23,50,79,.07)}
-.honors-note{color:var(--slate);font-size:1.05rem;margin-bottom:24px}
-.honors-note strong{color:var(--navy)}
-.honors-row{display:grid;grid-template-columns:1.15fr .85fr;gap:24px}
-.award{display:flex;flex-direction:column;gap:4px;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:5px;padding:18px 24px;background:var(--off)}
-.award-k{font-family:var(--disp);font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--slate)}
-.award-k::before{content:"★ ";color:var(--red)}
-.award-n{font-family:var(--disp);font-weight:800;font-size:1.2rem;color:var(--navy);text-transform:uppercase}
-.award-d{font-size:.93rem;color:var(--slate);margin-top:6px;line-height:1.55}
-.runners{display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);border-left:4px solid var(--navy);border-radius:5px;padding:18px 24px;background:var(--off)}
-.runners .award-k::before{color:var(--navy)}
-.runner-names{display:flex;gap:10px;flex-wrap:wrap}
-.runner-names span{font-family:var(--disp);font-weight:800;color:var(--navy);text-transform:uppercase;font-size:.9rem;background:#fff;border:1px solid var(--line);border-radius:3px;padding:6px 13px}
-.runners-d{font-size:.87rem;color:var(--slate)}
-@media(max-width:900px){.honors{padding:26px 22px}.honors-row{grid-template-columns:1fr}}
-
-/* contact */
-.contact{background:var(--off)}
-.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px}
-.contact-info h2{font-size:clamp(1.8rem,3.8vw,2.6rem);font-weight:800;color:var(--navy);margin:14px 0 16px}
-.contact-info>p{color:var(--slate);margin-bottom:28px}
-.cline{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px}
-.cline .ic{flex:none;width:40px;height:40px;border-radius:4px;background:var(--navy);display:grid;place-items:center;color:#fff}
-.cline a{color:var(--navy);font-weight:700;text-decoration:none}
-.cline a:hover{color:var(--red)}
-.cline .t{font-family:var(--disp);font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--slate)}
-.people{display:grid;gap:14px;margin-bottom:22px}
-.person{background:#fff;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:5px;padding:18px 20px}
-.person .nm{font-family:var(--disp);font-weight:800;font-size:1.05rem;color:var(--navy);text-transform:uppercase}
-.person .rl{font-family:var(--disp);font-size:.66rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--red);margin:2px 0 8px}
-.person a{display:block;color:var(--navy);font-weight:700;text-decoration:none;font-size:.95rem;line-height:1.7}
-.person a:hover{color:var(--red)}
-form{display:grid;gap:16px;background:linear-gradient(180deg,#FFFFFF,#FBFCFD);border:1px solid var(--line);border-top:4px solid var(--red);border-radius:5px;padding:32px;box-shadow:0 2px 6px rgba(16,24,38,.05),0 20px 46px rgba(16,24,38,.11)}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-label{font-family:var(--disp);font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.13em;color:var(--navy);display:grid;gap:7px}
-input,select,textarea{font-family:var(--body);font-size:1rem;padding:13px 14px;border:1.5px solid var(--line);border-radius:3px;background:#fff;color:var(--ink);width:100%;transition:.2s}
-input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(32,84,147,.14)}
-.check{display:flex;gap:10px;align-items:flex-start;font-family:var(--body);font-size:.86rem;font-weight:400;text-transform:none;letter-spacing:0;color:var(--slate)}
-.check input{width:auto;margin-top:3px}
-
-/* footer */
-footer{background:var(--navy-deep);color:var(--mist);padding:46px 0}
-.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-.foot small{font-size:.82rem}
-.foot .tag{font-family:var(--disp);font-weight:700;text-transform:uppercase;letter-spacing:.16em;color:#fff;font-size:.8rem}
-.foot .tag b{color:#FF4D63}
-
-/* reveal */
-.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
-.rv.on{opacity:1;transform:none}
-
-@media(max-width:900px){
-  .hero{grid-template-columns:1fr}
-  .hero-badge{order:-1;margin-bottom:6px;justify-content:flex-start}
-  .seal{width:130px}
-  .stats-in{grid-template-columns:repeat(2,1fr);gap:26px 12px}
-  .stats-in .stat:last-child{grid-column:1/-1}
-  .grid3,.rec-grid{grid-template-columns:1fr}
-  .why-grid{grid-template-columns:1fr}
-  .careers-in{grid-template-columns:1fr}
-  .contact-grid{grid-template-columns:1fr}
-  .row2{grid-template-columns:1fr}
-  .nav-links{position:fixed;top:70px;right:0;left:0;background:#fff;flex-direction:column;gap:0;padding:8px 0 14px;border-bottom:1px solid var(--line);display:none;box-shadow:0 14px 30px rgba(23,50,79,.12)}
-  .nav-links.open{display:flex}
-  .nav-links li{width:100%;text-align:center}
-  .nav-links a{display:block;padding:13px}
-  .burger{display:block}
-  section{padding:70px 0}
-}
-</style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
 <nav>
   <div class="nav-in">
-    <a class="logo" href="#top" aria-label="On Point Consulting and Canvassing — home">
+    <a class="logo" href="./" aria-label="On Point Consulting — home">
       <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><circle cx="48" cy="52" r="44" fill="#17324F"/><circle cx="48" cy="52" r="33" fill="#FFFFFF"/><circle cx="48" cy="52" r="22" fill="#17324F"/><circle cx="48" cy="52" r="12" fill="#FFFFFF"/><circle cx="48" cy="52" r="7" fill="#6E7B8A"/><g fill="#1E5AA8"><path d="M58,42 L84,16 L91,23 L65,49 Z"/><path d="M48,52 L70,44 L56,30 Z"/></g></svg>
-      On Point <b>&nbsp;Consulting &amp; Canvassing</b>
+      On Point <b>&nbsp;Consulting</b>
     </a>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#record">Track Record</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#why">Why Us</a></li>
-      <li><a href="#careers">Join the Crew</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a class="btn nav-cta" href="#contact">Start a Campaign</a></li>
+      <li><a class="active" href="./">Home</a></li>
+      <li><a href="services.html">What We Do</a></li>
+      <li><a href="track-record.html">Track Record</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="careers.html">Join the Crew</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a class="btn nav-cta" href="contact.html">Start a Project</a></li>
     </ul>
     <button class="burger" id="burger" aria-label="Menu">☰</button>
   </div>
@@ -242,13 +39,13 @@ footer{background:var(--navy-deep);color:var(--mist);padding:46px 0}
 <header id="top">
   <div class="wrap hero">
     <div>
-      <span class="kicker">Your Vote, Our Mission</span>
+      <span class="kicker">Focused &nbsp;·&nbsp; Reliable &nbsp;·&nbsp; Results</span>
       <h1>Boots on the ground.<br><em>Results on the board.</em></h1>
-      <p class="lead">On Point Consulting &amp; Canvassing runs professional field operations — petition signatures, GPS-verified door programs, and voter contact — 400,000+ signatures gathered across more than a dozen states.</p>
-      <p class="sub"><strong>11 years in this business</strong> — petitioner, canvasser, manager, coordinator, founder. Crews holding <strong>10,000+ doors a week</strong> in the battlegrounds and gathering <strong>10–20K signatures a week</strong> in California, two cycles running. You only pay for work that verifiably happened.</p>
+      <p class="lead">On Point builds and runs the machinery of growth — turnkey sales and canvass crews, recruiting and training, lead generation and call floors, AI-built business systems, and the media that feeds them. For companies and campaigns alike.</p>
+      <p class="sub"><strong>11 years of ground game</strong> — 225,000+ doors, 400,000+ signatures, 15 states — and we run our whole operation on software we built ourselves. Every knock, call, and dollar is tracked. You only pay for work that verifiably happened.</p>
       <div class="hero-ctas">
-        <a class="btn" href="#contact">Start a Campaign</a>
-        <a class="btn ghost" href="#careers">Join the Crew</a>
+        <a class="btn" href="contact.html">Start a Project</a>
+        <a class="btn ghost" href="careers.html">Join the Crew</a>
       </div>
     </div>
     <div class="hero-badge">
@@ -288,10 +85,10 @@ footer{background:var(--navy-deep);color:var(--mist);padding:46px 0}
 <div class="stats">
   <div class="stats-in">
     <div class="stat rv"><div class="num" data-count="11" data-suffix="">0</div><div class="lbl">Years in the Business</div></div>
-    <div class="stat rv"><div class="num" data-count="175000" data-suffix="+">0</div><div class="lbl">Doors Knocked</div></div>
+    <div class="stat rv"><div class="num" data-count="225000" data-suffix="+">0</div><div class="lbl">Doors Knocked</div></div>
     <div class="stat rv"><div class="num" data-count="400000" data-suffix="+">0</div><div class="lbl">Signatures Gathered</div></div>
     <div class="stat rv"><div class="num" data-count="79" data-suffix="%+">0</div><div class="lbl">Validity Rate</div></div>
-    <div class="stat rv"><div class="num" data-count="14" data-suffix="">0</div><div class="lbl">States &amp; Counting</div></div>
+    <div class="stat rv"><div class="num" data-count="15" data-suffix="">0</div><div class="lbl">States &amp; Counting</div></div>
   </div>
 </div>
 
@@ -299,225 +96,59 @@ footer{background:var(--navy-deep);color:var(--mist);padding:46px 0}
   <div class="wrap mission-in rv">
     <span class="kicker k-navy">Our Mission</span>
     <h2>Grow together</h2>
-    <p class="mission-sub">We move campaigns across the map — and people up in the world.</p>
-    <p>Our mission is simple: <strong>grow together.</strong> We build next to each other — we don't tear each other's buildings down. Campaigns get the most compliant, hardest-driving field operation in the country. Our people get travel, real money, and the chance to become more than they thought they could be.</p>
-    <p>On Point exists to prove that the ones who think they couldn't — <strong>can.</strong> A measure they said would never make the ballot. A canvasser who'd never left their home state, now traveling the country and out-earning desk jobs. A kid with a clipboard who becomes a business owner.</p>
-    <p>The discipline behind it started in the Army — 88N transportation management, moving people and equipment where they needed to be, on time, no excuses. That's still the job. We coordinate the work, honor the rules, and deliver for every party we touch — proponents, canvassers, contractors, and vendors alike. We weather every storm, and we never quit before the deadline.</p>
-    <p>And then there's the feeling at the end of it — the last packet on the turn-in table, the deadline beaten, the crew paid, boots finally off. Job done, <strong>all the way done</strong>, nothing left owed to anyone. That feeling is why we do this. We call it the joy of finished work — and around here, we collect it every time.</p>
+    <p class="mission-sub">We move companies and campaigns across the map — and people up in the world.</p>
+    <p style="text-align:center">On Point exists to prove that the ones who think they couldn't — <strong>can.</strong> We build next to each other, deliver for every party we touch, weather every storm, and never quit before the deadline.</p>
     <div class="motto">The Joy of Finished Work <b>★</b> The Pursuit of Happiness <b>★</b> Liberty &amp; Love for All</div>
+    <div class="see-more"><a class="btn navy" href="about.html">Read the Full Mission</a></div>
   </div>
 </section>
 
-<section class="record" id="record">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <span class="kicker k-navy">Track Record</span>
-      <h2>Numbers you can check</h2>
-      <p>We don't sell promises — we show the ledger. Every program below ran on tracked turf, logged turn-ins, and verified production.</p>
-    </div>
-    <div class="mapwrap rv">
-      <h3 class="map-title">The map so far — 14 states</h3>
-      <p class="map-sub">From a first campaign as a petitioner in Florida to statewide programs coast to coast.</p>
-      <div class="usmap" id="usmap" aria-label="Map of U.S. states where On Point has run field operations"></div>
-      <div class="map-legend">
-        <span><i style="background:var(--red)"></i>Florida — where it started</span>
-        <span><i style="background:var(--navy)"></i>States we've worked</span>
-      </div>
-    </div>
-    <div class="rec-grid">
-      <div class="rec rv"><span class="yr">2024 · Presidential</span><h3>Wisconsin &amp; Arizona</h3><p>Coordinated battleground door programs — owned the rural turf others wouldn't touch and staffed it with local hires. Sustained double-digit weekly volume with crews of 10–20.</p><div class="big">10,000+<small>doors per week</small></div></div>
-      <div class="rec rv"><span class="yr">Two Cycles Running</span><h3>California</h3><p>A decade in-state: San Diego's short-term-rental referendum, crew lead on the 2020 flavored-tobacco referendum, 2024's seven statewides plus SF, Alameda &amp; Vallejo — all qualified. Now: <strong>16 statewides and four San Francisco citywides</strong>, multiple crews across multiple locations — the campaign On Point opened its doors on.</p><div class="big">10–20K<small>signatures per week</small></div></div>
-      <div class="rec rv"><span class="yr">2024 · Field Coordinator</span><h3>Arkansas</h3><p>Issue 2 — the countywide casino-approval amendment. Tactically cleared 90% of counties on a 50-county distribution requirement before deadline; passed with 55.8%. Also delivered RFK Jr.'s ballot access: 13,000 signatures on a 5,000 requirement.</p><div class="big">Passed<small>90% of counties cleared</small></div></div>
-      <div class="rec rv"><span class="yr">2015–2020</span><h3>Michigan</h3><p>Six statewide petition drives — the One Fair Wage minimum-wage increase, earned paid sick time, clean-water protections, and Proposal 1 marijuana legalization (2018) — plus multiple candidate campaigns.</p><div class="big">6 statewides<small>one state, five years</small></div></div>
-      <div class="rec rv"><span class="yr">Four Cycles · 2026 Complete</span><h3>Colorado</h3><p>18+ statewide petitions across four cycles, running crews since 2024. This cycle: seven concurrent measures run start to finish — 40+ state-certified circulators and a tiered event program covering festivals drawing 550,000+. Turn-ins complete; most expected to make the ballot.</p><div class="big">Completed<small>18+ petitions · four cycles</small></div></div>
-      <div class="rec rv"><span class="yr">Est. 2015</span><h3>Florida — Where It Started</h3><p>First clipboard: the Amendment 4 voting-rights petition (passed 2018) and the greyhound-racing ban. Then Amendment 2 medical marijuana (2016) — first coordination role — the Seminole compact defense (2021–22), and Smart &amp; Safe (2024–26).</p><div class="big">Home turf<small>HQ · Fort Lauderdale</small></div></div>
-      <div class="rec rv"><span class="yr">Now Booking</span><h3>2026 General</h3><p>Built to mobilize 100 canvassers in 30 days for statewide door programs — weekly production plans, daily reporting, verified-work billing.</p><div class="big">500,000<small>door programs — let's talk</small></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="services">
+<section class="light" id="services">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="kicker k-navy">What We Do</span>
-      <h2>Full-service field operations</h2>
-      <p>From ballot access to election day, we build and run the ground game — so your campaign focuses on the message while we deliver the numbers.</p>
+      <h2>Six divisions, one machine</h2>
+      <p>Eleven years of political ground games taught us how to recruit, train, deploy, and track production anywhere. Now we run that machine for everyone — companies, contractors, and campaigns that need doors knocked, calls made, people hired, systems built, or stories told.</p>
     </div>
     <div class="grid3">
-      <div class="card rv"><div class="n">01</div><h3>Petition &amp; Signature Gathering</h3><p>Ballot initiatives, candidate filings, referenda. Per-circulator ledgers, validity-first quality control, and turn-in transmittals that account for every sheet.</p></div>
-      <div class="card rv"><div class="n">02</div><h3>GPS-Verified Door Canvassing</h3><p>Persuasion and GOTV at 100+ verified doors per canvasser per day. Every knock lands in the app — you watch production in real time.</p></div>
-      <div class="card rv"><div class="n">03</div><h3>Voter Registration</h3><p>High-volume registration drives run clean and compliant, targeted to the precincts where new voters actually move your margin.</p></div>
-      <div class="card rv"><div class="n">04</div><h3>Event &amp; Street Canvassing</h3><p>Tiered event deployment — festivals, markets, transit hubs — crowd-matched to your measure, from 550,000-person festivals to weekly farmers markets.</p></div>
-      <div class="card rv"><div class="n">05</div><h3>Field Strategy &amp; Consulting</h3><p>Turf targeting, budget planning, and weekly production plans from operators who have walked the turf — not just modeled it.</p></div>
-      <div class="card rv"><div class="n">06</div><h3>Rapid Crew Mobilization</h3><p>Deadlines don't move. We recruit, certify, train, and field crews fast — from a standing start to 100 canvassers in 30 days.</p></div>
+      <a class="card rv" href="services.html#crews" style="text-decoration:none"><div class="n">01</div><h3>Turnkey Sales &amp; Canvass Crews</h3><p>Recruited, trained, housed, and deployed anywhere in the country — door-to-door sales, brand ambassadors, petition and voter contact. A field force that shows up producing.</p></a>
+      <a class="card rv" href="services.html#recruiting" style="text-decoration:none"><div class="n">02</div><h3>Recruitment &amp; Training</h3><p>A vetted national bench of 750+ field reps and the machine that built it — hiring funnels, scripts, certification pipelines, and crew-lead development.</p></a>
+      <a class="card rv" href="services.html#leads" style="text-decoration:none"><div class="n">03</div><h3>Lead Generation &amp; Call Floors</h3><p>Researched, scored lead lists and the cold-call platforms to work them — appointment setting, follow-up discipline, and closers who close on the call.</p></a>
+      <a class="card rv" href="services.html#systems" style="text-decoration:none"><div class="n">04</div><h3>AI &amp; Custom Business Systems</h3><p>CRMs, payroll ledgers, rosters, call apps, and live dashboards — the same AI-built stack that runs On Point, built for your business.</p></a>
+      <a class="card rv" href="services.html#media" style="text-decoration:none"><div class="n">05</div><h3>Videography, Ads &amp; Social</h3><p>Recruitment ads, brand films, and social media management. Content built to fill hiring funnels and sales pipelines — shot, cut, and posted for you.</p></a>
+      <a class="card rv" href="services.html#political" style="text-decoration:none"><div class="n">06</div><h3>Political Field Operations</h3><p>The original engine — <strong>Your Vote, Our Mission.</strong> Petitions, ballot access, voter contact, and GOTV with validity-first discipline and GPS-verified reporting.</p></a>
     </div>
+    <div class="see-more rv"><a class="btn" href="services.html">Explore Every Division</a></div>
   </div>
 </section>
 
-<section class="why-sec" id="why">
+<section class="record">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="kicker">Why On Point</span>
-      <h2>You only pay for work that verifiably happened</h2>
-      <p>Founder-led by an operator who worked every rung over 11 years — petitioner, canvasser, crew manager, coordinator. Anyone can promise volume. We built our whole operation around proof — because the work that holds up when it's checked is the only work that counts.</p>
+      <span class="kicker k-navy">Proof</span>
+      <h2>The latest win</h2>
+      <p>We don't sell promises — we show the ledger. Here's the most recent program, run start to finish.</p>
     </div>
-    <div class="why-grid">
-      <div class="why rv"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h3>GPS-Verified Production</h3><p>Every door attempt is GPS-verified in the app. Weekly plans you approve, Friday reconciliation to the door, to the dollar. Fraud comes off your bill automatically.</p></div></div>
-      <div class="why rv"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><div><h3>Validity-First Petitions</h3><p>"Are you registered to vote?" is the first ask at every clipboard. Per-circulator validity rates tracked on every turn-in — bad signatures never reach your count.</p></div></div>
-      <div class="why rv"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div><h3>Certified, Trained Crews</h3><p>State-certified circulators, scripted and coached on real doors. We carry payroll, management, recruiting, training, and insurance — you get the production.</p></div></div>
-      <div class="why rv"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-6 4 3 5-8"/></svg></div><div><h3>Daily Reporting, Your Data</h3><p>Daily reporting by turf and canvasser, a 5% audit right on every week's doors, and your data stays your data. You hold the throttle the entire program.</p></div></div>
+    <div class="rec-grid">
+      <div class="rec rv wide"><span class="yr">2026 · Complete</span><h3>Maine — Latest Win</h3><p>Statewide rural door-knocking program run start to finish: a nine-person crew, housed and deployed, delivering 51,593 GPS-verified doors in nine weeks — <strong>double the contracted target</strong> — with daily production logs and payroll to the dollar.</p><div class="big">51,593<small>doors · 2× the contract</small></div></div>
+      <div class="rec rv wide"><span class="yr">Now Booking</span><h3>Your Project</h3><p>Sales crews, canvassing programs, call floors, recruiting pipelines, AI system builds, and media — mobilized fast, tracked daily, billed on verified work. Built to scale from a six-person sprint to 100 reps in 30 days.</p><div class="big">Let's talk<small>fall 2026 slots open</small></div></div>
     </div>
+    <div class="see-more rv"><a class="btn navy" href="track-record.html">See the Full Track Record — 15 States</a></div>
   </div>
 </section>
 
-<section id="careers" class="careers">
-  <div class="wrap careers-in">
-    <div class="rv">
-      <span class="kicker k-navy">Careers</span>
-      <h2>Get paid to change the outcome</h2>
-      <p class="cp">Canvassing is the rare job where hustle converts directly to pay — and where the work actually matters. Our top people out-produce entire crews, and we pay like it.</p>
-      <a class="btn navy" href="#contact" onclick="document.getElementById('role').value='canvasser'">Apply Now</a>
-    </div>
-    <ul class="perks rv">
-      <li><strong>Performance pay, paid weekly</strong>&nbsp;— you produce, you get paid. No waiting, no games.</li>
-      <li><strong>No experience required</strong>&nbsp;— we train you, script you, and get you state-certified.</li>
-      <li><strong>Flexible scheduling</strong>&nbsp;— full-time push or part-time side income.</li>
-      <li><strong>Real advancement</strong>&nbsp;— crew leads and managers are promoted from the field.</li>
-      <li><strong>Travel opportunities</strong>&nbsp;— deployments across a dozen-plus states and growing.</li>
-    </ul>
-  </div>
-  <div class="wrap">
-    <div class="honors rv">
-      <p class="honors-note">One thing we believe: <strong>the people carrying the clipboards are the company.</strong> We work for them — not the other way around.</p>
-      <div class="honors-row">
-        <div class="award">
-          <span class="award-k">Contractor of the Year</span>
-          <span class="award-n">Cameron McCallister</span>
-          <span class="award-d">$250K+ earned this year — with four months still on the clock. We didn't do that; he did. Our job was keeping the turf coming.</span>
-        </div>
-        <div class="runners">
-          <span class="award-k">Honored alongside him</span>
-          <div class="runner-names"><span>Lisa M</span><span>James E</span><span>Jaden C</span></div>
-          <span class="runners-d">Thank you for carrying us. It's a privilege to hand you clipboards.</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="wrap contact-grid">
-    <div class="contact-info rv">
-      <span class="kicker k-navy">Contact</span>
-      <h2>Drop us a line</h2>
-      <p>Running a campaign that needs a ground game? Looking to join a crew? We respond fast — because deadlines don't wait.</p>
-      <div class="people">
-        <div class="person">
-          <div class="nm">Hunter Samodolski</div>
-          <div class="rl">Owner · Founder</div>
-          <a href="tel:+14722134222">472-213-4222</a>
-          <a href="mailto:hunter@onpointccc.com">hunter@onpointccc.com</a>
-        </div>
-        <div class="person">
-          <div class="nm">Paul DeCicco</div>
-          <div class="rl">Owner · COO</div>
-          <a href="tel:+16316274333">631-627-4333</a>
-          <a href="mailto:Paulonpointcc@outlook.com">Paulonpointcc@outlook.com</a>
-        </div>
-      </div>
-      <div class="cline"><div class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="t">Headquarters</div><span style="font-weight:700;color:var(--navy)">515 E Las Olas Blvd, Suite 1301<br>Fort Lauderdale, FL</span></div></div>
-    </div>
-    <form class="rv" name="contact" method="POST" action="https://formsubmit.co/hunterleesamodolski@gmail.com">
-      <input type="hidden" name="_subject" value="New lead — onpointccc.com">
-      <input type="hidden" name="_cc" value="hunter@onpointccc.com">
-      <input type="hidden" name="_next" id="nextUrl" value="">
-      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-      <div class="row2">
-        <label>Name<input type="text" name="name" required autocomplete="name"></label>
-        <label>Email *<input type="email" name="email" required autocomplete="email"></label>
-      </div>
-      <div class="row2">
-        <label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
-        <label>I'm a…
-          <select name="role" id="role">
-            <option value="campaign">Campaign / Organization</option>
-            <option value="canvasser">Future Canvasser</option>
-            <option value="other">Something Else</option>
-          </select>
-        </label>
-      </div>
-      <label>Message<textarea name="message" rows="5" placeholder="Tell us about your campaign, your timeline, or yourself…"></textarea></label>
-      <label class="check"><input type="checkbox" name="newsletter" value="yes">Sign up for our email list for updates, promotions, and more.</label>
-      <button class="btn" type="submit">Send</button>
-    </form>
-  </div>
-</section>
+<div class="cta-strip">
+  <h2>Ready when you are</h2>
+  <p>Tell us what needs to grow — a sales pipeline, a crew, a campaign, or the systems behind them — and we'll bring the machine.</p>
+  <a class="btn" href="contact.html">Start a Project</a>
+</div>
 
 <footer>
   <div class="wrap foot">
     <small>Copyright © 2026 On Point Consulting &amp; Canvassing Corp — All Rights Reserved.</small>
-    <span class="tag">Your Vote <b>★</b> Our Mission</span>
+    <span class="tag">Focused <b>★</b> Reliable <b>★</b> Results</span>
   </div>
 </footer>
-
-<script>
-const burger=document.getElementById('burger'),links=document.getElementById('navLinks');
-burger.addEventListener('click',()=>links.classList.toggle('open'));
-links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
-
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.15});
-document.querySelectorAll('.rv').forEach(el=>io.observe(el));
-
-const fmt=n=>n>=1000?n.toLocaleString('en-US'):String(n);
-const cio=new IntersectionObserver(es=>es.forEach(e=>{
-  if(!e.isIntersecting)return;cio.unobserve(e.target);
-  const el=e.target,target=+el.dataset.count,suf=el.dataset.suffix||'',t0=performance.now(),dur=1400;
-  const tick=t=>{const p=Math.min((t-t0)/dur,1),v=Math.round(target*(1-Math.pow(1-p,3)));el.textContent=fmt(v)+suf;if(p<1)requestAnimationFrame(tick)};
-  requestAnimationFrame(tick);
-}),{threshold:.5});
-document.querySelectorAll('.num[data-count]').forEach(el=>cio.observe(el));
-
-// form success redirect works on any host (root domain or subpath)
-document.getElementById('nextUrl').value = location.origin + location.pathname.replace(/index\.html$/,'').replace(/\/?$/,'/') + 'thanks.html';
-
-// US map — interactive: states we've worked light up with program details
-const OPS={
-  fl:{n:'Florida — Est. 2015',d:'First clipboard: the Amendment 4 voting-rights-restoration petition (passed 2018) and the greyhound-racing ban. Amendment 2 medical marijuana (2016) — first coordination role, running teams. Seminole gaming-compact defense (2021–22). Smart & Safe marijuana campaigns (2024–26). HQ: Fort Lauderdale.',c:'#C8102E',h:'#E01A37'},
-  ca:{n:'California',d:'San Diego short-term-rental referendum — 62K signatures in 30 days. 2020: crew lead on the statewide flavored-tobacco referendum (became Prop 31). 2022: 6–8 statewide petitions. 2024: coordinated crews & office — seven statewides plus San Francisco, Alameda County & Vallejo petitions, all qualified. 2026: 16 statewides and four San Francisco citywides — multiple crews, multiple locations — the campaign On Point opened its doors on. 10–20K signatures/week, two cycles running.'},
-  az:{n:'Arizona',d:'2024 presidential — coordinated swing-state door programs at 10,000+ per week. Owned the rural turf, staffed it with local hires.'},
-  wi:{n:'Wisconsin',d:'2024 presidential — coordinated 10,000+ doors/week with a crew of 10–20. Conquered the rural areas others wouldn\'t touch.'},
-  co:{n:'Colorado',d:'Four cycles, 18+ statewide petitions. Ran crews since 2024 — seven concurrent measures in the 2026 cycle with 40+ state-certified circulators. Completed: turn-ins in, most expected to make the ballot.'},
-  ar:{n:'Arkansas',d:'2024 field coordinator — Issue 2, the countywide casino-approval amendment: tactically cleared 90% of counties on a 50-county distribution requirement before deadline. Passed 55.8%. Also delivered RFK Jr. ballot access — 13K signatures on a 5K requirement.'},
-  mi:{n:'Michigan',d:'2015–2020: six statewide petition drives — One Fair Wage minimum-wage increase, earned paid sick time (MI Time to Care), clean-water protections, and Proposal 1 marijuana legalization (2018) — plus multiple candidate campaigns.'},
-  oh:{n:'Ohio',d:'First management post — a van and a crew of 4–6. The kidney-dialysis pricing amendment, the Drug Price Relief Act (Issue 2, 2017), and the Stop Puppy Mills campaign.'},
-  va:{n:'Virginia',d:'2025 — candidate ballot-access project: finished in under two weeks with a six-person crew.'},
-  wv:{n:'West Virginia',d:'2018 — statewide ballot-access petition, U.S. Senate campaign.'},
-  ny:{n:'New York',d:'Statewide petition & field operations.'},
-  nh:{n:'New Hampshire',d:'2022 — candidate ballot-access work.'},
-  ky:{n:'Kentucky',d:'2024 — RFK Jr. independent presidential ballot access.'},
-  mt:{n:'Montana',d:'2026 — statewide candidate petition program, active now.'}
-};
-fetch('assets/us-map.svg').then(r=>r.text()).then(txt=>{
-  const box=document.getElementById('usmap');box.innerHTML=txt;
-  const svg=box.querySelector('svg');
-  if(!svg.getAttribute('viewBox'))svg.setAttribute('viewBox','0 0 '+svg.getAttribute('width')+' '+svg.getAttribute('height'));
-  svg.removeAttribute('width');svg.removeAttribute('height');
-  svg.querySelectorAll('path').forEach(p=>{p.style.fill='#EBEFF4';p.style.stroke='#fff';p.style.strokeWidth='1.2';p.style.transition='fill .18s,filter .18s'});
-  const tip=document.createElement('div');tip.className='map-tip';box.appendChild(tip);
-  const move=e=>{const r=box.getBoundingClientRect();let x=e.clientX-r.left+16,y=e.clientY-r.top-14;if(x>r.width-330)x-=350;tip.style.left=x+'px';tip.style.top=y+'px'};
-  const lift='drop-shadow(0 3px 4px rgba(15,36,56,.38))',liftHot='drop-shadow(0 7px 11px rgba(15,36,56,.5))';
-  Object.keys(OPS).forEach(s=>{
-    const o=OPS[s],base=o.c||'#17324F',hot=o.h||'#C8102E',paths=svg.querySelectorAll('.'+s);
-    paths.forEach(p=>{
-      p.style.fill=base;p.style.cursor='pointer';p.style.stroke='#fff';p.style.strokeWidth='1.5';p.style.filter=lift;
-      p.addEventListener('mouseenter',e=>{paths.forEach(q=>{q.style.fill=hot;q.style.filter=liftHot});tip.innerHTML='<b>'+o.n+'</b>'+o.d;tip.style.opacity=1;move(e)});
-      p.addEventListener('mousemove',move);
-      p.addEventListener('mouseleave',()=>{paths.forEach(q=>{q.style.fill=base;q.style.filter=lift});tip.style.opacity=0});
-    });
-    // label only the states with room for it — keeps the East Coast clean
-    try{const bb=paths[0].getBBox();if(['ca','mt','az','co','ar','wi','mi','ny','fl'].includes(s)){const t=document.createElementNS('http://www.w3.org/2000/svg','text');t.setAttribute('x',bb.x+bb.width/2);t.setAttribute('y',bb.y+bb.height/2+4);t.setAttribute('text-anchor','middle');t.setAttribute('style','fill:#fff;font-family:Montserrat,sans-serif;font-weight:800;font-size:14px;letter-spacing:1px;pointer-events:none;paint-order:stroke;stroke:rgba(15,36,56,.55);stroke-width:2.5px');t.textContent=s.toUpperCase();svg.appendChild(t)}}catch(err){}
-  });
-}).catch(()=>{});
-</script>
+<script src="assets/site.js"></script>
 </body>
 </html>
