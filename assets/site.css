@@ -130,7 +130,7 @@ section{padding:96px 0}
 .careers p.cp{color:var(--slate);margin-bottom:26px;font-size:1.05rem}
 .perks{list-style:none;display:grid;gap:14px}
 .perks li{display:flex;gap:12px;align-items:flex-start;font-size:.97rem;color:var(--ink)}
-.perks li::before{content:"â˜…";color:var(--red);font-size:.85rem;line-height:1.8}
+.perks li::before{content:"★";color:var(--red);font-size:.85rem;line-height:1.8}
 .perks strong{color:var(--navy)}
 .honors{margin-top:56px;background:#fff;border:1px solid var(--line);border-top:4px solid var(--red);border-radius:5px;padding:34px 36px;box-shadow:0 10px 30px rgba(23,50,79,.07)}
 .honors-note{color:var(--slate);font-size:1.05rem;margin-bottom:24px}
@@ -138,7 +138,7 @@ section{padding:96px 0}
 .honors-row{display:grid;grid-template-columns:1.15fr .85fr;gap:24px}
 .award{display:flex;flex-direction:column;gap:4px;border:1px solid var(--line);border-left:4px solid var(--red);border-radius:5px;padding:18px 24px;background:var(--off)}
 .award-k{font-family:var(--disp);font-size:.64rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--slate)}
-.award-k::before{content:"â˜… ";color:var(--red)}
+.award-k::before{content:"★ ";color:var(--red)}
 .award-n{font-family:var(--disp);font-weight:800;font-size:1.2rem;color:var(--navy);text-transform:uppercase}
 .award-d{font-size:.93rem;color:var(--slate);margin-top:6px;line-height:1.55}
 .runners{display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);border-left:4px solid var(--navy);border-radius:5px;padding:18px 24px;background:var(--off)}
