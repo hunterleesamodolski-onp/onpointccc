@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Join the Crew — On Point Consulting</title>
 <meta name="description" content="Get paid to change the outcome. Performance pay, weekly checks, travel across 15 states and counting, real advancement — canvassing, sales, and call-floor careers at On Point.">
-<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="%2317324F"/><circle cx="50" cy="50" r="34" fill="%23FFFFFF"/><circle cx="50" cy="50" r="20" fill="%23C8102E"/><path d="M50 38 l3.5 8 8.8 0.8 -6.6 5.8 2 8.6 -7.7 -4.6 -7.7 4.6 2 -8.6 -6.6 -5.8 8.8 -0.8 z" fill="%23FFFFFF"/></svg>'>
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="%2317324F"/><circle cx="50" cy="50" r="34" fill="%23FFFFFF"/><circle cx="50" cy="50" r="20" fill="%231B8FD0"/><path d="M50 38 l3.5 8 8.8 0.8 -6.6 5.8 2 8.6 -7.7 -4.6 -7.7 4.6 2 -8.6 -6.6 -5.8 8.8 -0.8 z" fill="%23FFFFFF"/></svg>'>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
@@ -17,14 +17,15 @@
   <div class="nav-in">
     <a class="logo" href="./" aria-label="On Point Consulting — home">
       <svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><circle cx="48" cy="52" r="44" fill="#17324F"/><circle cx="48" cy="52" r="33" fill="#FFFFFF"/><circle cx="48" cy="52" r="22" fill="#17324F"/><circle cx="48" cy="52" r="12" fill="#FFFFFF"/><circle cx="48" cy="52" r="7" fill="#6E7B8A"/><g fill="#1E5AA8"><path d="M58,42 L84,16 L91,23 L65,49 Z"/><path d="M48,52 L70,44 L56,30 Z"/></g></svg>
-      On Point <b>&nbsp;Consulting</b>
+      On Point
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="./">Home</a></li>
       <li><a href="services.html">What We Do</a></li>
-      <li><a href="track-record.html">Track Record</a></li>
+      <li><a href="track-record.html">Results</a></li>
       <li><a href="about.html">About</a></li>
       <li><a class="active" href="careers.html">Join the Crew</a></li>
+      <li><a href="political.html">Political</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a class="btn nav-cta" href="contact.html">Start a Project</a></li>
     </ul>
@@ -46,14 +47,14 @@
       <span class="kicker k-navy">The Deal</span>
       <h2>You produce, you get paid</h2>
       <p class="cp">Our top people out-produce entire crews, and we pay like it. No experience required — we train you, script you, and put you on real turf with real support.</p>
-      <a class="btn navy" href="contact.html?role=canvasser">Apply Now</a>
+      <a class="btn navy" href="#apply">Apply Now</a>
     </div>
     <ul class="perks rv">
       <li><strong>Performance pay, paid weekly</strong>&nbsp;— you produce, you get paid. No waiting, no games.</li>
       <li><strong>No experience required</strong>&nbsp;— we train you, script you, and get you certified where needed.</li>
       <li><strong>Flexible scheduling</strong>&nbsp;— full-time push or part-time side income.</li>
       <li><strong>Real advancement</strong>&nbsp;— crew leads and managers are promoted from the field.</li>
-      <li><strong>Travel opportunities</strong>&nbsp;— deployments across 15 states and growing.</li>
+      <li><strong>Travel opportunities</strong>&nbsp;— deployments across 16 states and growing.</li>
       <li><strong>More than doors</strong>&nbsp;— sales crews, call floors, recruiting, and media roles as we grow.</li>
     </ul>
   </div>
@@ -74,12 +75,47 @@
       </div>
     </div>
   </div>
+  <div class="wrap" id="apply" style="margin-top:56px">
+    <div class="contact-grid">
+      <div class="contact-info rv">
+        <span class="kicker k-navy">Apply</span>
+        <h2>Put your name in</h2>
+        <p>Two minutes, no resume required. Tell us who you are and what kind of work you want — doors, phones, crew leadership, or camera — and we'll call you. That's the whole process.</p>
+        <p style="font-weight:700;color:var(--navy)">We hire on hustle, not history.</p>
+      </div>
+      <form class="rv" name="application" method="POST" action="https://formsubmit.co/hunterleesamodolski@gmail.com">
+        <input type="hidden" name="_subject" value="New APPLICATION — onpointccc.com">
+        <input type="hidden" name="_next" id="nextUrl" value="">
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="row2">
+          <label>Name *<input type="text" name="name" required autocomplete="name"></label>
+          <label>Phone *<input type="tel" name="phone" required autocomplete="tel"></label>
+        </div>
+        <div class="row2">
+          <label>Email<input type="email" name="email" autocomplete="email"></label>
+          <label>City &amp; State<input type="text" name="location" placeholder="Where are you based?"></label>
+        </div>
+        <label>I want to work in…
+          <select name="role" id="role">
+            <option value="doors">Doors — Canvassing / D2D Sales</option>
+            <option value="phones">Phones — Call Floor / Appointment Setting</option>
+            <option value="lead">Crew Lead / Management</option>
+            <option value="media">Media — Video / Social</option>
+            <option value="any">Wherever I'm needed</option>
+          </select>
+        </label>
+        <label>Tell us about yourself<textarea name="message" rows="4" placeholder="Experience, availability, willing to travel? A sentence or two is plenty…"></textarea></label>
+        <button class="btn" type="submit">Apply</button>
+      </form>
+    </div>
+  </div>
 </section>
 
 <footer>
   <div class="wrap foot">
-    <small>Copyright © 2026 On Point Consulting &amp; Canvassing Corp — All Rights Reserved.</small>
+    <small>Copyright © 2026 On Point Consulting — All Rights Reserved.</small>
     <span class="tag">Focused <b>★</b> Reliable <b>★</b> Results</span>
+    <div class="unc-credit"><img src="assets/unc-mark.svg" alt="UNC" width="22" height="22"><span>Systems by <b>UNC</b> &#183; Unified Neural Command</span></div>
   </div>
 </footer>
 <script src="assets/site.js"></script>
